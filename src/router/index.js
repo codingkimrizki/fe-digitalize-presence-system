@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TheLayout from '@/layout/TheLayout.vue'
-import adminRoutes from '@/router/routes/admin'
+import adminRoutes from '@/router/routes/superAdmin'
 import authRoutes from '@/router/routes/auth'
 import dashboardRoutes from '@/router/routes/dashboard'
-import masterDataRoutes from '@/router/routes/master'
+import attendanceList from '@/router/routes/attendanceList'
+import attendanceReport from '@/router/routes/attendanceReport'
+import MemberManagement from '@/router/routes/admin'
 import { authGuard } from './middleware/authGuard'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -17,8 +19,11 @@ const routes = [
     meta: { breadcrumb: 'Home' },
     children: [
       ...dashboardRoutes,
-      ...masterDataRoutes,
+      ...attendanceList,
+      ...attendanceReport,
+      ...MemberManagement,
       ...adminRoutes,
+
       {
         path: '/under-construction',
         name: 'Under Construction',

@@ -13,17 +13,17 @@ export default [
     children: [
       {
         path: '/',
-        name: 'Machine Dashboard',
-        component: () => import('@/views/dashboard/machine/MainDashboard.vue'),
+        name: 'Attendance Dashboard',
+        component: () => import('@/views/dashboard/dashboard/DashboardAttendance.vue'),
         meta: {
           // requiresAuth: true,
           requiresAuth: false,
           roles: ['admin', 'staff', 'user'],
-          breadcrumb: 'Machine',
+          breadcrumb: 'Realtime Presence',
           showInMenu: true,
-          title: 'Machine',
+          title: 'Realtime Presence',
         },
-      },
+      }
     ],
   },
 ]

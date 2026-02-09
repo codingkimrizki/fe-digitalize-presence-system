@@ -55,7 +55,7 @@
       :modalTitle="modal.title"
     >
       <template #body>
-        <MachineForm
+        <MemberManagementForm
           :data="modal.data"
           :mode="modal.mode"
           @close="handleClose"
@@ -70,7 +70,7 @@ import BaseModal from '@/components/base/BaseModal.vue'
 import BaseTable from '@/components/base/BaseTable.vue'
 import { computed, onMounted, ref, watch } from 'vue'
 import { debounce } from 'lodash-es'
-import MachineForm from './MachineForm.vue'
+import MemberManagementForm from './MemberManagementForm.vue'
 import { useMachineStore } from '@/stores/machine'
 import { capitalizeEachWord } from '@/utils/capitalizeEachWord'
 
@@ -108,6 +108,13 @@ const baseColumns = [
     sorter: true,
   },
   {
+    title: 'Group',
+    dataIndex: 'brand',
+    key: 'brand',
+    ellipsis: true,
+    sorter: true,
+  },
+  {
     title: 'NIK',
     dataIndex: 'tonnage',
     key: 'tonnage',
@@ -115,88 +122,17 @@ const baseColumns = [
     width: 100,
   },
   {
-    title: 'Photo',
-    dataIndex: 'tonnage',
-    key: 'tonnage',
-    sorter: true,
-    width: 100,
-  },
-
-  // {
-  //   title: 'Machine Stats',
-  //   children: [
-  //     {
-  //       title: 'Injection',
-  //       children: [
-  //         {
-  //           title: 'Shot',
-  //           dataIndex: 'injectionShot',
-  //           key: 'injectionShot',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //         {
-  //           title: 'Target',
-  //           dataIndex: 'targetInjection',
-  //           key: 'targetInjection',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //         {
-  //           title: 'Tolerance',
-  //           dataIndex: 'toleranceInjection',
-  //           key: 'toleranceInjection',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: 'Zclean',
-  //       children: [
-  //         {
-  //           title: 'Shot',
-  //           dataIndex: 'zcleanShot',
-  //           key: 'zcleanShot',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //         {
-  //           title: 'Target',
-  //           dataIndex: 'targetZclean',
-  //           key: 'targetZclean',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //         {
-  //           title: 'Tolerance',
-  //           dataIndex: 'toleranceZclean',
-  //           key: 'toleranceZclean',
-  //           ellipsis: true,
-  //           sorter: true,
-  //           width: 120,
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
-  {
-    title: 'Last Updated',
-    dataIndex: 'updatedAt',
-    key: 'updatedAt',
+    title: 'Departement',
+    dataIndex: 'brand',
+    key: 'brand',
     ellipsis: true,
     sorter: true,
-    width: 150,
   },
   {
     title: 'Action',
-    dataIndex: 'action',
-    width: 100,
+    dataIndex: 'brand',
+    key: 'brand',
+    ellipsis: true,
   },
 ]
 

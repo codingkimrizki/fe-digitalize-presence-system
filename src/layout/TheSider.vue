@@ -83,6 +83,7 @@ import {
   TeamOutlined,
   FileOutlined,
   CalendarOutlined,
+  OrderedListOutlined
 } from '@ant-design/icons-vue'
 import { useSiderStore } from '@/stores/sidebar.js'
 import { useAuthStore } from '@/stores/auth.js'
@@ -101,6 +102,8 @@ const iconMap = {
   FileOutlined,
   CalendarOutlined,
   TeamOutlined,
+  OrderedListOutlined,
+
 }
 
 const authStore = useAuthStore()

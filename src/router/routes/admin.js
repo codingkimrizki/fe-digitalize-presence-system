@@ -2,7 +2,7 @@ export default [
   {
     path: '/admin',
     name: 'Admin',
-    redirect: '/user-management',
+    redirect: '/member-management',
     meta: {
       breadcrumb: 'Admin',
       showInMenu: true,
@@ -12,16 +12,16 @@ export default [
     },
     children: [
       {
-        path: '/user-management',
-        name: 'User Management',
-        component: () => import('@/views/admin/user/UserManagement.vue'),
+        path: '/member-management',
+        name: 'Employees',
+        component: () => import('@/views/memberManagement/memberManagement/MasterMemberManagement.vue'),
         meta: {
           // requiresAuth: true,
           requiresAuth: false,
           roles: ['admin'],
-          breadcrumb: 'User Management',
+          breadcrumb: 'Employees',
           showInMenu: true,
-          title: 'User Management',
+          title: 'Employees',
         },
       },
     ],

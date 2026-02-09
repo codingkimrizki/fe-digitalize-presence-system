@@ -40,31 +40,6 @@
         </a-select>
     </a-form-item>
 
-    <a-form-item label="Division" name="brand" :validate-trigger="['blur', 'change']">
-      <a-select>
-        <a-select-option value="jack">DESIGN</a-select-option>
-        <a-select-option value="lucy">IOT</a-select-option>
-        </a-select>
-    </a-form-item>
-
-    <a-form-item label="Role" name="brand" :validate-trigger="['blur', 'change']">
-      <a-select>
-        <a-select-option value="jack">MANAGER</a-select-option>
-        <a-select-option value="lucy">SUPERVISOR</a-select-option>
-        <a-select-option value="lucy">LEADER</a-select-option>
-        <a-select-option value="lucy">STAFF</a-select-option>
-        </a-select>
-    </a-form-item>
-
-    <a-form-item label="Upload Photo" name="brand" :validate-trigger="['blur', 'change']">
-      <a-upload>
-        <a-button>
-          <upload-outlined></upload-outlined>
-          Click to Upload
-        </a-button>
-      </a-upload>
-    </a-form-item>
-
     <!-- Brand Field -->
     <!-- <a-form-item label="Brand" name="brand" :validate-trigger="['blur', 'change']">
       <a-input placeholder="Enter Brand" v-model:value="formData.brand" :disabled="isDeleteMode" />

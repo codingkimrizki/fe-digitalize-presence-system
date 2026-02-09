@@ -19,6 +19,7 @@ body {
   --card-bg-transparent: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.15);
   --card-shadow-hover: rgba(0, 0, 0, 0.25);
+  --secondary-color: #666666;
 }
 
 .dark {
@@ -28,6 +29,7 @@ body {
   --card-bg-transparent: #272727;
   --card-shadow: rgba(255, 255, 255, 0.08);
   --card-shadow-hover: rgba(255, 255, 255, 0.18);
+  --secondary-color: #bbbbbb;
 }
 
 .ant-card {

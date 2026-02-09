@@ -2,15 +2,26 @@
   <a-row :gutter="[24, 24]" :wrap="true">
     <BaseWidget
       :height="110"
-      title="Total Machine"
+      title="Assembly Today Presence % "
       :value="machineStore.totalMachine"
       :icon="SettingOutlined"
-      description="Counted machine listed on database"
     />
     <BaseWidget
       :height="110"
-      title="Notes"
-      description="Machine statistics data doesn't automatically update from the RDZ device."
+      title="Late"
+      :value="machineStore.totalMachine"
+      :icon="SettingOutlined"
+    />
+    <BaseWidget
+      :height="110"
+      title="Sick"
+      :value="machineStore.totalMachine"
+      :icon="ExclamationCircleOutlined"
+    />
+    <BaseWidget
+      :height="110"
+      title="Paid Leave"
+      :value="machineStore.totalMachine"
       :icon="ExclamationCircleOutlined"
     />
   </a-row>
